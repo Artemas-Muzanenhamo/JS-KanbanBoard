@@ -33,7 +33,10 @@ const create_item = () => {
   save_btn.addEventListener('click', () => {
     error.innerHTML = '';
     if (input.notEqual('')) {
-      // TODO: Number 9
+      order += 1;
+      item.innerHTML = input.value;
+      adding = false;
+      // TODO: Number 10
     }
   });
 };
