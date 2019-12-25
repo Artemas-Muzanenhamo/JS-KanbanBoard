@@ -16,13 +16,26 @@ add_btn.addEventListener('click', () => {
 });
 
 const create_item = () => {
+  // Item
   let item = document.createElement('div');
   item.classList.add('item');
   item.id = 'item-' + order;
   item.draggable = true;
   item.addEventListener('dragstart', event => event.dataTransfer.setData('text', event.target.id));
   item.addEventListener('dragend', event => event.dataTransfer.clearData());
-  // TODO: Number 5
+
+  let input = document.createElement('input');
+  item.append(input);
+
+  // Save Button
+  let save_btn = document.createElement('button');
+  save_btn.innerHTML = 'Save';
+  save_btn.addEventListener('click', () => {
+    error.innerHTML = '';
+    if (input.notEqual('')) {
+      // TODO: Number 9
+    }
+  });
 };
 
 document.querySelectorAll('.drop').forEach(element => {
